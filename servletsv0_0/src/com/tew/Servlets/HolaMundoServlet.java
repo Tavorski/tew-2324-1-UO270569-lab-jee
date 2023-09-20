@@ -61,6 +61,20 @@ public class HolaMundoServlet extends HttpServlet {
 		}
 		out.println("<a href=\"index.html\">volver</a>");
 
+		// CONTADOR DE VISITAS TOTALES AL SERVELT INDEPENDIENTEMENTE DE LA SESION
+		Integer contador= (Integer) getServletContext().getAttribute("contador");
+		if ( contador == null ){
+		 contador = new Integer(0);
+		}
+		// Establecemos el contador como atributo del context bajo el nombre
+		// contador. En caso de que ya existiera, sobreescribiría la referencia
+		// existente con la nueva.
+		getServletContext().setAttribute("contador",new
+		Integer(contador.intValue()+1));
+		
+		// VISTA: CONTADOR DE VISITAS TOTALES
+		out.println("<br><br>" + contador +" visitas");
+		
 		out.println("</BODY></HTML>");
 	}
 
