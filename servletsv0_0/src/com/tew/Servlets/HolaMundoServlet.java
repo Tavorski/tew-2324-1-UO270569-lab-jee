@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class HolaMundoServlet
  */
-@WebServlet(name = "HolaMundo", urlPatterns = { "/HolaMundoCordial" })
+@WebServlet(name = "HolaMundo", urlPatterns = { "HolaMundoCordial" })
 public class HolaMundoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
