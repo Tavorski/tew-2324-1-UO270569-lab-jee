@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15689789332000" configfile="/gestioneitorv1_0/WebContent/WEB-INF/faces-config.xml">
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15689789332000" configfile="/gestioneitorv1_1/WebContent/WEB-INF/faces-config.xml">
   <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="122" y="380" id="pf15689822885271" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf15689822885272 pf15689822885273" path="/index.xhtml"/>
   <nodes xsi:type="pageflow:PFPage" name="listado.xhtml" x="554" y="380" id="pf15689822885274" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf15689822885275 pf15689822885276" inlinks="pf15689822885272 pf15689822885277 pf15689822885278 pf15689822885275" path="/listado.xhtml"/>
   <nodes xsi:type="pageflow:PFPage" name="altaForm.xhtml" x="338" y="178" id="pf15689822885279" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf15689822885277" inlinks="pf15689822885273" path="/altaForm.xhtml"/>
