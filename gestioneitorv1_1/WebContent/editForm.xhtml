@@ -1,25 +1,37 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-       xmlns:f="http://java.sun.com/jsf/core"
-       xmlns:p="http://primefaces.org/ui">
-<h:head>
-<title>Cabecera</title> 
-</h:head>
-<h:body>
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
 
-<!-- Aqu� va tu c�digo -->
-<h:form>
-<p:panelGrid columns="2">
-  NOMBRE:     <p:inputText value="#{controller.alumno.nombre}"/>
-  APELLIDOS:  <p:inputText value="#{controller.alumno.apellidos}"/>
-  USERID:     <p:inputText value="#{controller.alumno.iduser}"/>
-  EMAIL:      <p:inputText value="#{controller.alumno.email}"/>
-</p:panelGrid>
-  <h:commandButton value="Salvar" action="#{controller.salva}"/>
-</h:form>
+<!-- Si se quisiera tomar el idioma del navegador -->
+<!-- <f:view locale="#{facesContext.externalContext.requestLocale}"> -->
+<!-- Para tomar el idioma del bean de configuración BeanSettings -->
+<f:view locale="#{settings.locale}">
+	<h:head>
+		<title>#{msgs.tituloHead}</title>
+	</h:head>
+	<h:body>
 
+		<!-- Aqu� va tu c�digo -->
+		<h:form>
+			<p:panelGrid columns="2">
+  #{msgs.nombre}:     <p:inputText value="#{controller.alumno.nombre}" />
+  #{msgs.apellidos}:  <p:inputText
+					value="#{controller.alumno.apellidos}" />
+  #{msgs.userid}:     <p:inputText value="#{controller.alumno.iduser}" />
+  #{msgs.correo}:      <p:inputText value="#{controller.alumno.email}" />
+			</p:panelGrid>
+			<p:commandButton value="#{msgs.botonSalvar}" action="#{controller.salva}" />
+		</h:form>
 
-</h:body>
+		<div style="position: absolute; bottom: 15px">
+			<h:form>
+				<h:commandLink value="#{msgs.enlaceCasa}"
+					action="#{settings.goHome}"></h:commandLink>
+			</h:form>
+		</div>
+	</h:body>
+</f:view>
 </html>

@@ -1,36 +1,51 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-       xmlns:f="http://java.sun.com/jsf/core"
-       xmlns:p="http://primefaces.org/ui">
-<h:head>
-<title>Cabecera</title> 
-</h:head>
-<h:body>
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<!-- Si se quisiera tomar el idioma del navegador -->
+<!-- <f:view locale="#{facesContext.externalContext.requestLocale}"> -->
+<!-- Para tomar el idioma del bean de configuración BeanSettings -->
+<f:view locale="#{settings.locale}">
+	<h:head>
+		<title>#{msgs.tituloHead}</title>
+	</h:head>
+	<h:body>
 
-<!-- Aqu� va tu c�digo -->
-<h:form>
-<p:dataTable var="alumno" 
-             value="#{controller.alumnos}"
-             border="1">
-  <p:column><f:facet name="header">Nombre</f:facet>#{alumno.nombre}</p:column>
-  <p:column><f:facet name="header">Apellidos</f:facet>#{alumno.apellidos}</p:column>
-  <p:column><f:facet name="header">IdUser</f:facet>#{alumno.iduser}</p:column>
-  <p:column><f:facet name="header">Email</f:facet>#{alumno.email}</p:column>
-  <p:column><f:facet name="header">Baja</f:facet>
-    <h:commandLink action="#{controller.baja}" type="submit" value="BAJA" immediate="true">
-        <f:setPropertyActionListener target="#{controller.alumno}" value="#{alumno}"/>
-     </h:commandLink>
-  </p:column>
-  <p:column><f:facet name="header">Edición</f:facet>
-     <h:commandLink action="editar" type="submit" value="EDITAR" immediate="true">
-         <f:setPropertyActionListener target="#{controller.alumno}" value="#{alumno}"/>
-     </h:commandLink>
-  </p:column>
-</p:dataTable>
-</h:form>
+		<!-- Aqu� va tu c�digo -->
+		<h:form>
+			<p:dataTable var="valumno" value="#{controller.alumnos}" border="1">
+				<p:column>
+					<f:facet name="header">#{msgs.nombre}</f:facet>#{alumno.nombre}</h:column>
+				<p:column>
+					<f:facet name="header">#{msgs.apellidos}</f:facet>#{alumno.apellidos}</h:column>
+				<p:column>
+					<f:facet name="header">#{msgs.userid}</f:facet>#{alumno.iduser}</h:column>
+				<p:column>
+					<f:facet name="header">#{msgs.correo}</f:facet>#{alumno.email}</h:column>
+				<p:column>
+					<f:facet name="header">#{msgs.tablaBaja}</f:facet>
+					<h:commandLink action="#{controller.baja(valumno)}" type="submit"
+						value="#{msgs.enlaceBaja}" immediate="true">
+					</h:commandLink>
+				</p:column>
+				<hpcolumn>
+					<f:facet name="header">Edición</f:facet>
+					<h:commandLink actionListener="#{alumno.setAlumno(valumno)}"
+						type="submit" value="#{msgs.enlaceEditar}" immediate="true">
+					</h:commandLink>
+				</p:column>
+			</p:dataTable>
+		</h:form>
 
+		<div style="position: absolute; bottom: 15px">
+			<h:form>
+				<h:commandLink value="#{msgs.enlaceCasa}"
+					action="#{settings.goHome}"></h:commandLink>
+			</h:form>
+		</div>
 
-</h:body>
+	</h:body>
+</f:view>
 </html>
