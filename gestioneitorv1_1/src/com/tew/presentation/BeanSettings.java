@@ -26,5 +26,7 @@ partida “es”*/
 		locale = ENGLISH;
 		FacesContext.getCurrentInstance().getViewRoot().setLocale(locale);
 	}
+	
+
 
 }

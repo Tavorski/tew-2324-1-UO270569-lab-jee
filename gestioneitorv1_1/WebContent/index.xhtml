@@ -19,13 +19,14 @@
 		<h:form>
 			<!-- Se invoca a un action controller (controller.listado) que retornará la etiqueta de navegación oportuna: éxito o error -->
 			<p:menubar>
-				<p:menuitem value="Gestioneitorv2.1">
+				<p:menuitem value="#{msgs.tituloAplicacion1}">
 				</p:menuitem>
-				<p:submenu label="Gestion de alumnos">
+				<p:submenu label="#{msgs.tituloAplicacion2}">
 					<p:menuitem value="#{msgs.enlaceAlta}" action="alta"
 						actionListener="#{controller.iniciaAlumno}">
 					</p:menuitem>
-					<p:menuitem value="#{msgs.enlaceListado}" action="#{controller.listado}"></p:menuitem>
+					<p:menuitem value="#{msgs.enlaceListado}"
+						action="#{controller.listado}"></p:menuitem>
 				</p:submenu>
 				<f:facet name="options">
 					<h:commandLink value="#{msgs.enlaceIdiomaES}"
@@ -38,10 +39,10 @@
 			</p:menubar>
 		</h:form>
 
+
 		<div style="position: absolute; bottom: 15px">
 			<h:form>
-				<h:commandLink value="#{msgs.enlaceCasa}"
-					action="#{settings.goHome}"></h:commandLink>
+				<h:commandLink value="#{msgs.enlaceCasa}" action="home"></h:commandLink>
 			</h:form>
 		</div>
 

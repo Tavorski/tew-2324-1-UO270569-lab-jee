@@ -17,20 +17,20 @@
 		<h:form>
 			<p:dataTable var="valumno" value="#{controller.alumnos}" border="1">
 				<p:column>
-					<f:facet name="header">#{msgs.nombre}</f:facet>#{alumno.nombre}</h:column>
+					<f:facet name="header">#{msgs.nombre}</f:facet>#{alumno.nombre}</p:column>
 				<p:column>
-					<f:facet name="header">#{msgs.apellidos}</f:facet>#{alumno.apellidos}</h:column>
+					<f:facet name="header">#{msgs.apellidos}</f:facet>#{alumno.apellidos}</p:column>
 				<p:column>
-					<f:facet name="header">#{msgs.userid}</f:facet>#{alumno.iduser}</h:column>
+					<f:facet name="header">#{msgs.userid}</f:facet>#{alumno.iduser}</p:column>
 				<p:column>
-					<f:facet name="header">#{msgs.correo}</f:facet>#{alumno.email}</h:column>
+					<f:facet name="header">#{msgs.correo}</f:facet>#{alumno.email}</p:column>
 				<p:column>
 					<f:facet name="header">#{msgs.tablaBaja}</f:facet>
 					<h:commandLink action="#{controller.baja(valumno)}" type="submit"
 						value="#{msgs.enlaceBaja}" immediate="true">
 					</h:commandLink>
 				</p:column>
-				<hpcolumn>
+				<p:column>
 					<f:facet name="header">Edición</f:facet>
 					<h:commandLink actionListener="#{alumno.setAlumno(valumno)}"
 						type="submit" value="#{msgs.enlaceEditar}" immediate="true">
@@ -41,8 +41,7 @@
 
 		<div style="position: absolute; bottom: 15px">
 			<h:form>
-				<h:commandLink value="#{msgs.enlaceCasa}"
-					action="#{settings.goHome}"></h:commandLink>
+				<h:commandLink value="#{msgs.enlaceCasa}" action="home"></h:commandLink>
 			</h:form>
 		</div>
 
