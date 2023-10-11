@@ -21,6 +21,11 @@
 		<managed-bean-class>com.tew.presentation.BeanSettings</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>alumno</managed-bean-name>
+		<managed-bean-class>com.tew.presentation.BeanAlumno</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
 
 
 	<navigation-rule>

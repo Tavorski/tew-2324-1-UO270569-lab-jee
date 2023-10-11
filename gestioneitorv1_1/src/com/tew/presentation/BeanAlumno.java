@@ -5,6 +5,7 @@ import javax.faces.bean.*;
 import javax.faces.context.FacesContext;
 import javax.faces.event.ActionEvent;
 import com.tew.model.Alumno;
+
 @ManagedBean(name="alumno")
 @SessionScoped
 public class BeanAlumno extends Alumno implements Serializable {

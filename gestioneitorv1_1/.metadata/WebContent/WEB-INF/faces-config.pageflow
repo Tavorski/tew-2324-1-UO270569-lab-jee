@@ -5,7 +5,7 @@
   <nodes xsi:type="pageflow:PFPage" name="altaForm.xhtml" x="338" y="178" id="pf15689822885279" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf15689822885277" inlinks="pf15689822885273" path="/altaForm.xhtml"/>
   <nodes xsi:type="pageflow:PFPage" name="editForm.xhtml" x="338" y="583" id="pf156898228852710" referenceLink="//@navigationRule.3/@navigationCase.1/@toViewId|" outlinks="pf15689822885278" inlinks="pf15689822885276" path="/editForm.xhtml"/>
   <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="967" id="pf156898228852711" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf156898228852712 pf16964332814693" path="*"/>
-  <nodes xsi:type="pageflow:PFPage" name="error.xhtml" x="338" y="967" id="pf156898228852713" referenceLink="//@navigationRule.4/@navigationCase.1/@toViewId|" inlinks="pf156898228852712" path="/error.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="error.xhtml" x="338" y="967" id="pf156898228852713" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" inlinks="pf156898228852712" path="/error.xhtml"/>
   <links id="pf15689822885272" target="pf15689822885274" source="pf15689822885271" outcome="exito" fromaction="#{controller.listado}"/>
   <links id="pf15689822885273" target="pf15689822885279" source="pf15689822885271" outcome="alta"/>
   <links id="pf15689822885277" target="pf15689822885274" source="pf15689822885279" outcome="exito" fromaction="#{controller.salva}"/>
