@@ -19,8 +19,11 @@ public class BeanAlumnos implements Serializable{
 	// de la tabla o de un formulario. 
 	// Es necesario inicializarlo para que al entrar desde el formulario de 
 	// AltaForm.xhtml se puedan dejar los valores en un objeto existente.
-	private Alumno alumno = new Alumno();
 	private Alumno[] alumnos = null;
+
+	@ManagedProperty(value="#{alumno}")
+	private BeanAlumno alumno;
+
 	public BeanAlumnos(){
 		iniciaAlumno(null);
 	}
@@ -35,11 +38,11 @@ public class BeanAlumnos implements Serializable{
 		alumno.setApellidos(bundle.getString("valorDefectoApellidos"));
 		alumno.setEmail(bundle.getString("valorDefectoCorreo")); 
 	}
-	public Alumno getAlumno() {
-		return alumno;
-	}
 	public void setAlumno(Alumno alumno) {
-		this.alumno = alumno;
+		this.alumno = (BeanAlumno) alumno;
+	}
+	public BeanAlumno getAlumno(){
+		return this.alumno;
 	}
 	public Alumno[] getAlumnos() {
 		return alumnos;
@@ -69,7 +72,7 @@ public class BeanAlumnos implements Serializable{
 			// a través de la factoría
 			service = Factories.services.createAlumnosService();
 			//Recargamos el alumno en la tabla de la base de datos por si hubiera cambios.
-			alumno = service.findById(alumno.getId());
+			alumno = (BeanAlumno) service.findById(alumno.getId());
 			return "exito";
 		} catch (Exception e) {
 			e.printStackTrace();  
