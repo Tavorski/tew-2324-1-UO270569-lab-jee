@@ -75,8 +75,15 @@ public class BeanSettings implements Serializable {
 	}
 
 	public void setEnglish(ActionEvent event) {
-		locale = ENGLISH;
-		FacesContext.getCurrentInstance().getViewRoot().setLocale(locale);
-	}
 
+		locale = ENGLISH;
+		try {
+			FacesContext.getCurrentInstance().getViewRoot().setLocale(locale);
+			if (alumno != null)
+				if (alumno.getId() == null) // valores por defecto del alumno, si no NO inicializar
+					alumno.iniciaAlumno(null);
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+	}
 }
