@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15689789332000" configfile="/gestioneitorv1_1/WebContent/WEB-INF/faces-config.xml">
   <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="122" y="380" id="pf15689822885271" referenceLink="//@navigationRule.4/@navigationCase.1/@toViewId|" outlinks="pf15689822885272 pf15689822885273" inlinks="pf16964332814693" path="/index.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="listado.xhtml" x="554" y="380" id="pf15689822885274" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf15689822885275 pf15689822885276" inlinks="pf15689822885272 pf15689822885277 pf15689822885278 pf15689822885275" path="/listado.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="altaForm.xhtml" x="338" y="178" id="pf15689822885279" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf15689822885277" inlinks="pf15689822885273" path="/altaForm.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="editForm.xhtml" x="338" y="583" id="pf156898228852710" referenceLink="//@navigationRule.3/@navigationCase.1/@toViewId|" outlinks="pf15689822885278" inlinks="pf15689822885276" path="/editForm.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="967" id="pf156898228852711" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf156898228852712 pf16964332814693" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="listado.xhtml" x="554" y="380" id="pf15689822885274" referenceLink="//@navigationRule.4/@navigationCase.2/@toViewId|" outlinks="pf15689822885275 pf15689822885276" inlinks="pf15689822885272 pf15689822885277 pf15689822885278 pf15689822885275 pf16974516465771" path="/listado.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="altaForm.xhtml" x="338" y="178" id="pf15689822885279" referenceLink="//@navigationRule.1/@navigationCase.1/@toViewId|" outlinks="pf15689822885277" inlinks="pf15689822885273 pf16974513282460" path="/altaForm.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="editForm.xhtml" x="338" y="583" id="pf156898228852710" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf15689822885278" inlinks="pf15689822885276" path="/editForm.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="967" id="pf156898228852711" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf156898228852712 pf16964332814693 pf16974513282460 pf16974516465771" path="*"/>
   <nodes xsi:type="pageflow:PFPage" name="error.xhtml" x="338" y="967" id="pf156898228852713" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" inlinks="pf156898228852712" path="/error.xhtml"/>
   <links id="pf15689822885272" target="pf15689822885274" source="pf15689822885271" outcome="exito" fromaction="#{controller.listado}"/>
   <links id="pf15689822885273" target="pf15689822885279" source="pf15689822885271" outcome="alta"/>
@@ -18,4 +18,6 @@
     <bendPoints d1Width="-64" d2Width="-64"/>
   </links>
   <links id="pf16964332814693" target="pf15689822885271" source="pf156898228852711" outcome="home"/>
+  <links id="pf16974513282460" target="pf15689822885279" source="pf156898228852711" outcome="alta"/>
+  <links id="pf16974516465771" target="pf15689822885274" source="pf156898228852711" outcome="exito" fromaction="#{controller.listado}"/>
 </pageflow:Pageflow>
