@@ -47,8 +47,8 @@
 			</p:inputText>
 			<p:message for="correo" />
 		</h:panelGroup>
-		<h:commandButton value="#{msgs.botonSalvar}"
-			action="#{controller.salva}" update="Grid">
-		</h:commandButton>
+		<p:commandButton value="#{msgs.botonSalvar}"
+			action="#{controller.salva}" update="Grid" process="form-principal" >
+		</p:commandButton>
 	</p:panelGrid>
 </ui:composition>

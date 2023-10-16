@@ -11,7 +11,7 @@
 		<!--COMIENZO MARCO TEMPLATE -->
 		
 		<h:form>
-			<p:dataTable var="valumno" value="#{controller.alumnos}" border="1">
+			<p:dataTable id="tablaListado" var="valumno" value="#{controller.alumnos}" border="1">
 				<p:column>
 					<f:facet name="header">#{msgs.tablaNombre}</f:facet>#{valumno.nombre}</p:column>
 				<p:column>
@@ -28,10 +28,10 @@
 				</p:column>
 				<p:column>
 					<f:facet name="header">#{msgs.tablaEditar}</f:facet>
-					<h:commandLink action="editar" type="submit"
+					<p:commandLink action="editar" type="submit"
 						value="#{msgs.tablaEditar}"
-						actionListener="#{alumno.setAlumno(valumno)}" immediate="true">
-					</h:commandLink>
+						actionListener="#{alumno.setAlumno(valumno)}" immediate="true" update="tablaListado">
+					</p:commandLink>
 				</p:column>
 			</p:dataTable>
 		</h:form>
