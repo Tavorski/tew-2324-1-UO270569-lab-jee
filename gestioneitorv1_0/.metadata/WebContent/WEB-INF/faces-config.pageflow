@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16958177824540" configfile="/gestioneitorv1_0/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="396" y="192" id="pf16958251230991" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf16958251230992 pf16958251230993" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="listado.xhtml" x="312" y="48" id="pf16958251230994" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf16959892096620 pf16959892096621" inlinks="pf16958251230992 pf16958261726729 pf16959892096620" path="/listado.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="altaForm.xhtml" x="132" y="36" id="pf16958251231005" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf16958261726729" inlinks="pf16958251230993" path="/altaForm.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="*" x="108" y="156" id="pf16958253697096" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf16958253697097" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="error.xhtml" x="204" y="180" id="pf16958253697098" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf16958253697097" path="/error.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="editForm.xhtml" id="pf16959892096632" referenceLink="//@navigationRule.3/@navigationCase.1/@toViewId|" inlinks="pf16959892096621" path="/editForm.xhtml"/>
+  <links id="pf16958251230992" target="pf16958251230994" source="pf16958251230991" outcome="exito" fromaction="#{controller.listado}"/>
+  <links id="pf16958251230993" target="pf16958251231005" source="pf16958251230991" outcome="alta"/>
+  <links id="pf16958253697097" target="pf16958253697098" source="pf16958253697096" outcome="error"/>
+  <links id="pf16958261726729" target="pf16958251230994" source="pf16958251231005" outcome="exito" fromaction="#{controller.salva}"/>
+  <links id="pf16959892096620" target="pf16958251230994" source="pf16958251230994" outcome="exito" fromaction="#{controller.baja}"/>
+  <links id="pf16959892096621" target="pf16959892096632" source="pf16958251230994" outcome="editar"/>
+</pageflow:Pageflow>
