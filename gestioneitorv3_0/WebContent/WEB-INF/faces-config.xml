@@ -26,6 +26,11 @@
 		<managed-bean-class>com.tew.presentation.BeanAlumno</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>login</managed-bean-name>
+		<managed-bean-class>com.tew.presentation.BeanLogin</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
 
 
 	<navigation-rule>
@@ -38,6 +43,16 @@
 		<navigation-case>
 			<from-outcome>alta</from-outcome>
 			<to-view-id>/altaForm.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{login.verify}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{login.verify}</from-action>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/opciones.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 
@@ -92,8 +107,13 @@
 		</navigation-case>
 		<navigation-case>
 			<from-outcome>home</from-outcome>
+			<to-view-id>/opciones.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>login</from-outcome>
 			<to-view-id>/index.xhtml</to-view-id>
 		</navigation-case>
+
 	</navigation-rule>
 
 </faces-config>
