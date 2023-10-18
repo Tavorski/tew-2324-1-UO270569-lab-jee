@@ -5,11 +5,13 @@ import java.util.ResourceBundle;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.*;
 import javax.faces.context.FacesContext;
 import javax.faces.event.ActionEvent;
 
 import com.tew.business.AlumnosService;
+import com.tew.business.LoginService;
 import com.tew.infrastructure.Factories;
 import com.tew.model.Alumno;
 
@@ -94,8 +96,25 @@ public class BeanAlumnos implements Serializable {
 			alumnos = (Alumno[]) service.getAlumnos().toArray(new Alumno[0]);
 			return "exito";
 		} catch (Exception e) {
-			e.printStackTrace();
-			return "error";
+			//e.printStackTrace();
+			//return "error";
+			
+			// Necesario para acceder a msgs y a los mensajes en español e ingles de los
+			// ficheros
+			// de propiedades
+			FacesContext jsfCtx = FacesContext.getCurrentInstance();
+			ResourceBundle bundle = jsfCtx.getApplication().getResourceBundle(jsfCtx, "msgs");
+			
+			FacesMessage msg = null;
+			
+			// por estar dentro del catch, el estado actual del programa
+			// es que no se pudo cargar la base de datos de alumnos
+			// se prepara el mensaje que saldra en la vista del cliente
+			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, bundle.getString("listado_no_pudo_cargar_alumnos"), null);
+			// se añade al element con id=”msg”
+			FacesContext.getCurrentInstance().addMessage(null, msg);
+			return "exito";
+			
 		}
 	}
 

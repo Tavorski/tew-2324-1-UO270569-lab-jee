@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet Filter implementation class LoginFilter
  */
-@WebFilter(dispatcherTypes = { DispatcherType.FORWARD }, description = "Filtro de seguridad", urlPatterns = {
+@WebFilter(dispatcherTypes = { DispatcherType.REQUEST }, description = "Filtro de seguridad", urlPatterns = {
 		"/faces/restricted/*", "/restricted/*" }, initParams = {
 				@WebInitParam(name = "LoginParam", value = "/faces/index.xhtml", description = "Página de loggeo") })
 public class LoginFilter implements Filter {

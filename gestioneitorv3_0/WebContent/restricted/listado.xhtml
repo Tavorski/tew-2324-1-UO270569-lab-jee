@@ -8,8 +8,7 @@
  #{msgs.tituloOperacionListado}
  </ui:define>
 	<ui:define name="cuerpo">
-		<!--COMIENZO MARCO TEMPLATE -->
-		
+		<p:growl id="mensajes" showDetail="false" />
 		<h:form>
 			<p:dataTable id="tablaListado" var="valumno" value="#{controller.alumnos}" border="1">
 				<p:column>
@@ -36,7 +35,7 @@
 			</p:dataTable>
 		</h:form>
 		
-		<!--FIN MARCO TEMPLATE -->
+		
 	</ui:define>
 	<ui:define name="pie">
 	</ui:define>

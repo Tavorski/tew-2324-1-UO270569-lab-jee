@@ -42,8 +42,10 @@ public class BeanLogin implements Serializable {
 		// de propiedades
 		FacesContext jsfCtx = FacesContext.getCurrentInstance();
 		ResourceBundle bundle = jsfCtx.getApplication().getResourceBundle(jsfCtx, "msgs");
+		
 		FacesMessage msg = null;
 		LoginService login = Factories.services.createLoginService();
+		
 		User user = login.verify(name, password);
 		if (user != null) {
 			putUserInSession(user);
