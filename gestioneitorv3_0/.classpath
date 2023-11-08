@@ -14,5 +14,11 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/hsqldb.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/primefaces-5.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Propietario/git/tew-2324-1-UO270569-lab-jee/gestioneitorv3_0/WebContent/WEB-INF/lib/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Propietario/git/tew-2324-1-UO270569-lab-jee/gestioneitorv3_0/WebContent/WEB-INF/lib/commons-io-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Propietario/git/tew-2324-1-UO270569-lab-jee/gestioneitorv3_0/WebContent/WEB-INF/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Propietario/git/tew-2324-1-UO270569-lab-jee/gestioneitorv3_0/WebContent/WEB-INF/lib/httpclient-4.5.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Propietario/git/tew-2324-1-UO270569-lab-jee/gestioneitorv3_0/WebContent/WEB-INF/lib/httpcore-4.4.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Propietario/git/tew-2324-1-UO270569-lab-jee/gestioneitorv3_0/WebContent/WEB-INF/lib/json_simple.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
