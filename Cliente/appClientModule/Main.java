@@ -9,7 +9,7 @@ import org.json.simple.JSONValue;
 public class Main {
 	public static void main(String[] args) {
 		Client client = ClientBuilder.newClient();
-		WebTarget target = client.target("http://localhost:8080/gestioneitorv4_0/pisos.json");
+		WebTarget target = client.target("http://localhost:8080/gestioneitorv1_1/pisos.json");
 		String result = target.request().get().readEntity(String.class);
 
 		System.out.println(result);
