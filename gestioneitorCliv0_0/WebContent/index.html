@@ -1,31 +1,26 @@
 <!-- 
 ***************************************************
-Asignatura: Tecnologías Web
-Titulación: GIITIN
+Asignatura: TecnologÃ­as Web
+TitulaciÃ³n: GIITIN
 Autor     : Enrique
 Universidad de Oviedo
 ***************************************************
 -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Tecnologías Web</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TecnologÃ­as Web</title>
 </head>
-  <body>
-    <!-- 
-	***************************************************
-	* CABECERA DE LA PAGINA ***************************
-	***************************************************
-	-->
-	
-		<h1>Tecnologías Web</h1>
-	<!-- 
-	***************************************************
-	* MENU ********************************************
-	***************************************************
-	-->
-	<div>
+<body>
+	<!-- CABECERA DE LA PAGINA -->
+	<header>
+		<h1>TecnologÃ­as Web</h1>
+	</header>
+
+	<!-- MENU -->
+	<nav>
 		<ul>
 			<li>Alumnos
 				<ul>
@@ -33,91 +28,72 @@ Universidad de Oviedo
 					<li><a href="#bajaAlumno">Baja</a></li>
 					<li><a href="#edicionAlumno">Edicion</a></li>
 					<li><a href="#listadoAlumnos">Listado</a></li>
-					<li><a href="#matricularAsignaturas" >Matricular
+					<li><a href="#matricularAsignaturas">Matricular
 							Asignaturas</a></li>
-					<li><a href="#desmatricularAsignaturas" >Quitar
-							Asignaturas</a></li>
+					<li><a href="#desmatricularAsignaturas">Quitar Asignaturas</a></li>
 				</ul>
 			</li>
 			<li>Asignaturas
 				<ul>
-					<li><a href="#altaAsignatura" >Alta</a>
-					</li>
-					<li><a href="#bajaAsignatura" >Baja</a></li>
-					<li><a href="#edicionAsignatura" >Edicion</a></li>
-					<li><a href="#listadoAsignatura" >Listado</a></li>
+					<li><a href="#altaAsignatura">Alta</a></li>
+					<li><a href="#bajaAsignatura">Baja</a></li>
+					<li><a href="#edicionAsignatura">Edicion</a></li>
+					<li><a href="#listadoAsignatura">Listado</a></li>
 				</ul>
 			</li>
 			<li><a href="#">Calificaciones</a></li>
-			<li>Sesión
+			<li>SesiÃ³n
 				<ul>
-					<li><a href="login.html" >Login</a></li>
-					<li><a href="#logout" >Logout</a></li>
+					<li><a href="login.html">Login</a></li>
+					<li><a href="#logout">Logout</a></li>
 				</ul>
 			</li>
 		</ul>
-	</div>
+	</nav>
 
-	<!-- 
-	***************************************************
-	* SECCION PRINCIPAL DE FORMULARIOS         ********
-	***************************************************
-
-	-->
-  	<div>
-		<div>
+	<!-- SECCION PRINCIPAL DE FORMULARIOS -->
+	<section>
+		<article>
 			<h1>Login alumno</h1>
 			<pre>
-			Septiembre 14th, 2014
-		</pre>
-
-		</div>
-		<div>
+        Septiembre 14th, 2014
+      </pre>
+		</article>
+		<article>
 			<p>Datos para un nuevo alumno:</p>
-			<form id="login" action="#" enctype="application/x-www-form-urlencoded">
-			<p>
-				Login:
-				<input type="text" name="username" id="username" size="25"/>
-			</p>
-			<p>
-				Contraseña:
-				<input type="password" name="passwd" id="passwd" size="25"/>
-			</p>
-			<p>
-				<input type="submit" name="submit" id="submit" value="Enviar"/>
-				<input type="reset" name="reset" id="reset" value="Reiniciar"/>
-			</p>
-		</form>
-		</div>
-	</div>
-	
-	<!-- 
-	***************************************************
-	* ELEMENTO LATERAL INFORMATIVO ********************
-	***************************************************
-	-->
-	<div>
-		
+			<form id="login" action="#"
+				enctype="application/x-www-form-urlencoded">
+				<p>
+					Login: <input type="text" name="username" id="username" size="25" />
+				</p>
+				<p>
+					ContraseÃ±a: <input type="password" name="passwd" id="passwd"
+						size="25" />
+				</p>
+				<p>
+					<input type="submit" name="submit" id="submit" value="Enviar" /> <input
+						type="reset" name="reset" id="reset" value="Reiniciar" />
+				</p>
+			</form>
+		</article>
+	</section>
+
+	<!-- ELEMENTO LATERAL INFORMATIVO -->
+	<aside>
 		<h2>Proyecto GestioneitorCli v0.0</h2>
-		
-		<p>En este proyecto de partida para la asignatura se incluyen:
-		
+		<p>En este proyecto de partida para la asignatura se incluyen:</p>
 		<ol>
-			<li>Secciones básicas para estructurar el código de GestioneitorCli en HTML4. </li>
+			<li>Secciones bÃ¡sicas para estructurar el cÃ³digo de
+				GestioneitorCli en HTML5.</li>
 		</ol>
-	</div>
+	</aside>
 
-
-	<!-- 
-	***************************************************
-	* ELEMENTO PIE DE NAVEGACION** ********************
-	***************************************************
-	-->
-	<div>
-			<ul>
-				<li><a href="index.html">Casa</a></li>
-				<li><a href="#">Contacto</a></li>
-			</ul>
-	</div>	 
+	<!-- ELEMENTO PIE DE NAVEGACION -->
+	<footer>
+		<ul>
+			<li><a href="index.html">Casa</a></li>
+			<li><a href="#">Contacto</a></li>
+		</ul>
+	</footer>
 </body>
 </html>
